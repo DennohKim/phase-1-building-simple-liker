@@ -10,10 +10,11 @@ const colorStates = {
   "": "red"
 };
 
+const modal = document.querySelector('#modal')
 
 //Remove Modal
 window.addEventListener('DOMContentLoaded', function(){
-  const modal = document.querySelector('#modal').classList.add('hidden');
+  modal.classList.add('hidden');
 
 })
 
@@ -37,7 +38,7 @@ function likeCallback(e) {
       heart.style.color = colorStates[heart.style.color];
     })
     .catch(function(error) {
-      alert("Something went wrong!");
+      modal.classList.remove('hidden')
     });
 }
 
