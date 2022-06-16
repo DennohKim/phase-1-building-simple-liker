@@ -38,7 +38,9 @@ function likeCallback(e) {
       heart.style.color = colorStates[heart.style.color];
     })
     .catch(function(error) {
-      modal.classList.remove('hidden')
+      setTimeout(function() {
+        modal.classList.remove('hidden'), 3000
+      })
     });
 }
 
